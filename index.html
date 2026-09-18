@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050B2E">
+  <meta name="description" content="Formation Chartered Finance & Co — actifs financiers et risques boursiers en Afrique. 24–25 septembre 2026, 18h GMT, 100% en ligne via Zoom.">
+  <title>Chartered Finance & Co — Investir aujourd’hui, bâtir demain</title>
+  <style>
+    :root{
+      --navy:#050B2E; --navy2:#071342; --blue:#168CFF; --cyan:#19D9FF;
+      --lime:#A6F51A; --white:#fff; --muted:#AEB9D6; --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.045); --shadow:0 24px 80px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(5,11,46,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;height:48px}.brand img{height:46px;width:auto;object-fit:contain}
+    .brand b{color:var(--cyan)}
+    .nav-btn{padding:11px 19px;border-radius:999px;background:var(--lime);color:#06100a;font-weight:900;font-size:13px}
+    .hero{position:relative;min-height:calc(100vh - 72px);display:flex;align-items:center;padding:70px 0 80px;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:-20%;background:
+      radial-gradient(circle at 77% 42%,rgba(25,217,255,.15),transparent 24%),
+      radial-gradient(circle at 15% 72%,rgba(22,140,255,.13),transparent 28%),
+      linear-gradient(125deg,transparent 30%,rgba(166,245,26,.035) 50%,transparent 70%);
+      pointer-events:none}
+    .grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+    .eyebrow{display:inline-flex;border:1px solid rgba(166,245,26,.42);color:var(--lime);padding:7px 12px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    h1{font-size:clamp(48px,7vw,86px);line-height:.95;letter-spacing:-.065em;margin:20px 0}
+    h1 span{display:block;background:linear-gradient(90deg,var(--cyan),var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{font-size:19px;color:#dce5ff;max-width:690px}
+    .hero-copy strong{color:#fff}
+    .market-row{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+    .tag{border:1px solid var(--line);background:var(--glass);padding:7px 11px;border-radius:999px;color:var(--muted);font-size:12px}
+    .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;border-radius:999px;background:var(--lime);color:#06100a;font-weight:950;font-size:16px;box-shadow:0 16px 45px rgba(166,245,26,.14);transition:.25s}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 20px 55px rgba(166,245,26,.22)}
+    .contact-note{margin-top:11px;color:var(--muted);font-size:12px}
+    .portrait-wrap{position:relative;min-height:620px;display:flex;justify-content:center;align-items:center}
+    .portrait-wrap:before{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:radial-gradient(circle,rgba(25,217,255,.18),rgba(22,140,255,.05) 42%,transparent 68%);filter:blur(3px)}
+    .grid-lines{position:absolute;width:560px;height:560px;border:1px solid rgba(25,217,255,.12);border-radius:50%;background:
+      linear-gradient(rgba(25,217,255,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(25,217,255,.045) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle,#000 20%,transparent 70%)}
+    .portrait{position:relative;width:min(470px,92%);height:650px;object-fit:cover;object-position:center top;border-radius:235px 235px 26px 26px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.14)}
+    .speaker-card{position:absolute;left:0;bottom:38px;padding:15px 18px;border:1px solid rgba(25,217,255,.25);background:rgba(5,11,46,.88);backdrop-filter:blur(12px);border-radius:17px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+    .speaker-card strong{display:block;font-size:17px}.speaker-card small{color:var(--muted)}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#061038;overflow:hidden}
+    .ticker-inner{display:flex;gap:42px;white-space:nowrap;padding:13px 0;color:#8ea0c9;font-size:11px;text-transform:uppercase;letter-spacing:.14em}
+    section{padding:88px 0}
+    .section-head{max-width:760px;margin-bottom:34px}
+    .kicker{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    h2{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-.05em;margin:9px 0 14px}
+    .intro{color:var(--muted);max-width:700px}
+    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .info-card,.program-card,.market-card{border:1px solid var(--line);background:var(--glass);border-radius:20px;padding:22px;box-shadow:0 12px 45px rgba(0,0,0,.1)}
+    .info-card .label{font-size:10px;color:var(--cyan);font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    .info-card .value{font-weight:850;font-size:18px;margin-top:6px}.price{font-size:25px!important;color:var(--lime)}
+    .program-section{background:linear-gradient(180deg,#071342,#061038)}
+    .program-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .program-card{min-height:180px;position:relative;overflow:hidden}
+    .program-card:after{content:"";position:absolute;width:160px;height:160px;right:-65px;bottom:-65px;border-radius:50%;border:1px solid rgba(25,217,255,.16)}
+    .num{font-size:11px;color:var(--lime);font-weight:900;letter-spacing:.15em}
+    .program-card h3{font-size:25px;margin:10px 0 8px}.program-card p{color:var(--muted);margin:0}
+    .markets{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .market-card{min-height:190px}.market-card .code{font-size:28px;font-weight:950;color:#fff}.market-card p{color:var(--muted);font-size:14px}
+    .speaker-section{background:radial-gradient(circle at 10% 40%,rgba(22,140,255,.1),transparent 30%)}
+    .speaker-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+    .speaker-photo{width:100%;max-height:620px;object-fit:cover;object-position:center top;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .role{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    .speaker-name{font-size:clamp(38px,5vw,66px);line-height:.98;letter-spacing:-.055em;margin:12px 0}
+    .speaker-desc{color:var(--muted);font-size:18px;max-width:650px}
+    .promise{padding:120px 0;text-align:center;background:linear-gradient(135deg,#071342,#050B2E)}
+    .promise p{font-size:clamp(38px,6vw,72px);line-height:1.02;letter-spacing:-.055em;font-weight:900;margin:0}
+    .promise p span{color:var(--cyan)}
+    .booking{padding:90px 0}.booking-box{position:relative;overflow:hidden;border:1px solid rgba(25,217,255,.25);border-radius:30px;padding:52px;text-align:center;background:
+      radial-gradient(circle at 50% 0,rgba(25,217,255,.12),transparent 40%),rgba(255,255,255,.04)}
+    .booking-price{font-size:clamp(42px,6vw,74px);font-weight:950;color:var(--lime);letter-spacing:-.055em;margin:18px 0}
+    .booking-meta{color:var(--muted);margin-bottom:26px}
+    .payment{margin-top:18px;color:var(--muted);font-size:12px}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .mobile-cta{display:none}
+    [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    [data-reveal].visible{opacity:1;transform:none}
+    @media(max-width:900px){
+      .grid,.speaker-layout{grid-template-columns:1fr}.portrait-wrap{min-height:530px}.portrait{height:560px;width:350px}
+      .info-grid{grid-template-columns:1fr 1fr}.markets{grid-template-columns:1fr}
+      .speaker-card{left:4%}
+    }
+    @media(max-width:560px){
+      .nav{position:relative}.nav-inner{height:64px}.nav-btn{padding:9px 14px}
+      .hero{padding:48px 0 35px}.hero-copy{font-size:17px}h1{font-size:48px}
+      .portrait-wrap{min-height:475px}.portrait{height:500px;width:315px}.grid-lines{width:390px;height:390px}
+      .speaker-card{bottom:18px;font-size:13px}
+      section{padding:62px 0}.info-grid,.program-grid{grid-template-columns:1fr}
+      .booking-box{padding:35px 20px}.mobile-cta{display:flex;position:fixed;z-index:100;left:15px;right:15px;bottom:15px;justify-content:center;padding:15px;border-radius:999px;background:var(--lime);color:#06100a;font-weight:950;box-shadow:0 16px 40px rgba(0,0,0,.4)}
+      body{padding-bottom:76px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#"><img src="assets/logo.png" alt="Chartered Finance & Co"></a>
+      <a class="nav-btn" href="https://wa.me/237694790067?text=Bonjour%20Chartered%20Finance%20%26%20Co%2C%20je%20souhaite%20r%C3%A9server%20ma%20place%20pour%20la%20formation%20sur%20les%20actifs%20financiers%20et%20les%20risques%20boursiers%20en%20Afrique." target="_blank" rel="noopener">RÉSERVER</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container grid">
+      <div data-reveal>
+        <div class="eyebrow">Formation • 100% en ligne</div>
+        <h1>Investir aujourd’hui,<span>bâtir demain.</span></h1>
+        <p class="hero-copy"><strong>CAPACITATION DES INVESTISSEURS PRIVÉS AVISÉS</strong> sur l’acquisition d’<strong>ACTIFS FINANCIERS</strong> et les risques boursiers en Afrique.</p>
+        <div class="market-row">
+          <span class="tag">BVMAC</span><span class="tag">BVRM</span><span class="tag">NIGERIA STOCK EXCHANGE</span>
+          <span class="tag">Comprendre</span><span class="tag">Anticiper</span><span class="tag">Investir durablement</span>
+        </div>
+        <a class="cta" href="https://wa.me/237694790067?text=Bonjour%20Chartered%20Finance%20%26%20Co%2C%20je%20souhaite%20r%C3%A9server%20ma%20place%20pour%20la%20formation%20sur%20les%20actifs%20financiers%20et%20les%20risques%20boursiers%20en%20Afrique." target="_blank" rel="noopener">RÉSERVER MA PLACE →</a>
+        <div class="contact-note">WhatsApp • +237 621 803 025</div>
+      </div>
+
+      <div class="portrait-wrap" data-reveal>
+        <div class="grid-lines"></div>
+        <img class="portrait" src="assets/formateur.png" alt="Vincent Onana Binyegui, formateur">
+        <div class="speaker-card">
+          <strong>Vincent ONANA BINYEGUI</strong>
+          <small>Finance Internationale & Partenariats</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker"><div class="container ticker-inner">
+    <span>AFRICAN MARKETS</span><span>•</span><span>FINANCIAL INTELLIGENCE</span><span>•</span><span>INVESTMENT STRATEGY</span><span>•</span><span>RISK MANAGEMENT</span><span>•</span><span>BVMAC</span><span>•</span><span>BVRM</span>
+  </div></div>
+
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="kicker">Informations clés</div>
+        <h2>Deux jours pour mieux comprendre les marchés financiers africains.</h2>
+        <p class="intro">Une formation pensée pour les investisseurs privés qui souhaitent comprendre, analyser les opportunités et mieux appréhender les risques.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-card" data-reveal><div class="label">Date</div><div class="value">24 — 25 septembre 2026</div></div>
+        <div class="info-card" data-reveal><div class="label">Heure</div><div class="value">18h GMT</div></div>
+        <div class="info-card" data-reveal><div class="label">Lieu</div><div class="value">100% en ligne via Zoom</div></div>
+        <div class="info-card" data-reveal><div class="label">Participation</div><div class="value price">200 000 FCFA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="kicker">Au programme</div>
+        <h2>De la compréhension à la stratégie.</h2>
+      </div>
+      <div class="program-grid">
+        <article class="program-card" data-reveal><div class="num">01 / COMPRENDRE</div><h3>Comprendre</h3><p>Comprendre le fonctionnement des marchés financiers en Afrique.</p></article>
+        <article class="program-card" data-reveal><div class="num">02 / ANALYSER</div><h3>Analyser</h3><p>Analyser les opportunités d’investissement sur la BVMAC, la BVRM et la Nigeria Stock Exchange.</p></article>
+        <article class="program-card" data-reveal><div class="num">03 / MAÎTRISER</div><h3>Maîtriser les risques</h3><p>Évaluer et gérer les risques boursiers.</p></article>
+        <article class="program-card" data-reveal><div class="num">04 / INVESTIR</div><h3>Investir durablement</h3><p>Découvrir des stratégies d’investissement pour une rentabilité durable.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="kicker">Marchés concernés</div>
+        <h2>Les marchés au cœur de la formation.</h2>
+      </div>
+      <div class="markets">
+        <article class="market-card" data-reveal><div class="code">BVMAC</div><p>Bourse des Valeurs Mobilières de l’Afrique Centrale</p></article>
+        <article class="market-card" data-reveal><div class="code">BVRM</div><p>Bourse des Valeurs Mobilières de l’Afrique de l’Ouest</p></article>
+        <article class="market-card" data-reveal><div class="code">NGX</div><p>Nigeria Stock Exchange</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="speaker-section">
+    <div class="container speaker-layout">
+      <img class="speaker-photo" src="assets/formateur.png" alt="Vincent Onana Binyegui">
+      <div data-reveal>
+        <div class="role">Votre formateur</div>
+        <h2 class="speaker-name">Vincent ONANA BINYEGUI</h2>
+        <p class="speaker-desc">Consultant-associé, responsable du Pôle Finance Internationale et Partenariats, Cabinet Chartered Finance & Constructions Ltd.</p>
+        <a class="cta" href="https://wa.me/237694790067?text=Bonjour%20Chartered%20Finance%20%26%20Co%2C%20je%20souhaite%20r%C3%A9server%20ma%20place%20pour%20la%20formation." target="_blank" rel="noopener">RÉSERVER MA PLACE →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise">
+    <div class="container" data-reveal>
+      <p>Comprendre.<br>Anticiper.<br><span>Investir durablement.</span></p>
+      <p style="font-size:clamp(22px,3vw,36px);margin-top:32px;color:#dce5ff">Des connaissances d’aujourd’hui,<br>des opportunités de demain !</p>
+    </div>
+  </section>
+
+  <section class="booking">
+    <div class="container">
+      <div class="booking-box" data-reveal>
+        <div class="kicker">Réservation</div>
+        <h2>Réservez votre place.</h2>
+        <div class="booking-price">200 000 FCFA</div>
+        <div class="booking-meta">24 — 25 septembre 2026 • 18h GMT • 100% en ligne via Zoom</div>
+        <a class="cta" href="https://wa.me/237694790067?text=Bonjour%20Chartered%20Finance%20%26%20Co%2C%20je%20souhaite%20r%C3%A9server%20ma%20place%20pour%20la%20formation%20sur%20les%20actifs%20financiers%20et%20les%20risques%20boursiers%20en%20Afrique." target="_blank" rel="noopener">RÉSERVER MA PLACE →</a>
+        <div class="payment">Modes de paiement : Orange Money • Banque</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>CHARTERED FINANCE & CO</strong> • Investir aujourd’hui, bâtir demain</div>
+      <div>Facebook • LinkedIn • +237 621 803 025</div>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="https://wa.me/237694790067?text=Bonjour%20Chartered%20Finance%20%26%20Co%2C%20je%20souhaite%20r%C3%A9server%20ma%20place%20pour%20la%20formation%20sur%20les%20actifs%20financiers%20et%20les%20risques%20boursiers%20en%20Afrique." target="_blank" rel="noopener">RÉSERVER MA PLACE →</a>
+
+  <script>
+    const items = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
